@@ -6,7 +6,7 @@ yang pertama saya lakukan instalasi golang dan posgresql versi 9.3 (agar ringan)
 lalu untuk manajemen database saya menggunakan navicat
 
 Skenario
-    -init modul driver mysql untuk koneksi ke database
+    -init modul driver PGSQL untuk koneksi ke database
     -endpoint /datamahasiswa, ketika user get endpoint ke /datamahasiswa maka menangani permintaan informasi data
     -menggunakan parameter no_induk sebagai permintaan informasi data dari user ke server
     -query database menggunakan JOIN Tabel agar dapat digunakan untuk mengambil atau mendapatkan data mahasiswa (siswa,matakuliah,dosen, dan nilai)
@@ -15,11 +15,11 @@ Skenario
     -tampil data json mahasiswa
 
 Detail Kode
-    -membutuhkan paket import seperti net/http untuk HTTP Server, koneksi database/sql, ekstraksi JSON encoding/json, dan driver mysql
+    -membutuhkan paket import seperti net/http untuk HTTP Server, koneksi database/sql, ekstraksi JSON encoding/json, dan driver PGSQL
     -menggunakan 2 struktur data mahasiswa untuk mengambil nama dan mata kuliah, lalu ada matakuliahdetail untuk mengambil dosen, jumlah sks, nilai
     -fungsi main yaitu fungsi utama yang akan dieksekusi saat program dijalankan
     -endpoint /datamahasiswa, ketika endpoint ini diakses oleh user maka server melakukan proses pengambilan data dari database, dan membuat objek mahasiswa dan mengkonversi sebagai respon JSON
-    -koneksi database dibuka yang disediakan oleh paket driver mysql
+    -koneksi database dibuka yang disediakan oleh paket driver PGSQL
     -query database untuk mengambil data dari database, menggunakan JOIN Tabel agar semua tabel bisa ditampilkan
     -object mahasiswa, data yang diambil dari query database kemudian digunakan membuat objek mahasiswa dan mata kuliah
     -object mahasiswa yang telah dibuat maka dikonversi menjadi format JSON dan ditampilkan ke user
