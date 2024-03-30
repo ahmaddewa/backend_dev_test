@@ -1,0 +1,22 @@
+menggunakan database postgresql 9.3
+dalam struktur database akademik yang saya buat tersebut memiliki 3 tabel yaitu,
+
+ -tabel siswa berisi, 
+        -kolom siswa_id (menggunakan integer/angka dan primary key),
+        -kolom nama (menggunakan varchar/string dengan panjang 100),
+        -kolom no_induk (menggunakan integer),
+        -kolom kota (menggunakan varchar denga panjang 100),
+        -kolom tahun_masuk (menggunakan integer)
+
+-tabel mata_kuliah berisi,
+        -kolom mk_id (menggunakan integer dan primary key),
+        -kolom mk_nama (menggunakan varchar dgn panjang 100),
+        -kolom dosen_id (menggunakan integer, digunakan untuk join table dengan tabel dosen),
+        -kolom jumlah_sks (menggunakan integer)
+
+-tabel dosen berisi,
+        -kolom dosen_id (menggunakan integer dan primary key)
+        -kolom nama (menggunakan varchar dgn panjang 100),
+        -kolom kota (menggunakan varchar dgn panjang 100)
+
+dari ketiga tabel dan masing-masing kolom tersebut bisa untuk menyimpan data akademik dan menjadi laporan secara digital.

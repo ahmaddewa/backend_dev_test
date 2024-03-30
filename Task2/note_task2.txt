@@ -1,0 +1,31 @@
+untuk task 2 saya menambahkan tabel nilai_UTS dan nilai_UAS.
+
+    -tabel nilai_UTS berisi,
+            -kolom nilai_id (menggunakan integer dan primary key)
+            -kolom siswa_id (menggunakan integer dan digunakan untuk mengambil data siswa)
+            -kolom mk_id (menggunakan integer dan digunakan untuk mengambil data matakuliah)
+            -kolom nilai_uts (menggunakan float)
+            -FOREIGN KEY (siswa_id) untuk menghubungkan ke kolom siswa_id pada tabel siswa
+            -FOREIGN key (mk_id) untuk menghubungkan ke kolom mk_id pada tabel mata_kuliah
+
+    -tabel nilai_UAS berisi,
+            -kolom nilai_id (menggunakan integer dan primary key)
+            -kolom siswa_id (menggunakan integer dan digunakan untuk mengambil data siswa)
+            -kolom mk_id (menggunakan integer dan digunakan untuk mengambil data matakuliah)
+            -kolom nilai_uas (menggunakan float)
+            -FOREIGN KEY (siswa_id) untuk menghubungkan ke kolom siswa_id pada tabel siswa
+            -FOREIGN key (mk_id) untuk menghubungkan ke kolom mk_id pada tabel mata_kuliah
+
+jadi, setiap nilai UTS dan UAS mengambil atau terhubung dengan data siswa dan mata kuliah,
+contohnya, 
+    - ahmad dewa, big, 80
+    - ahmad dewa, bin, 100
+    - ahmad juandika, big, 90
+    - ahmad juandika, bin, 80
+
+untuk perhitungan nilai akhir bisa menggunakan rumus UTS 40% dan UAS 60%.
+nilai_akhir = (0.4 * nilai_uts) + (0.6 * nilai_uas)
+jadi untuk nilai_akhir tidak perlu dimasukkan kedalam database agar database tetap ringan,
+nilai akhir hanya dimunculkan dalam website / aplikasi golang.
+
+untuk input data bisa menggunakan SQL INSERT atau dari bahasa pemrograman yang digunakan (GOLANG).

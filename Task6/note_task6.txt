@@ -1,0 +1,28 @@
+Algoritma
+    -membaca isi file angka_romawi.txt
+    -memisahkan isi file menjadi baris-baris 
+    -iterasi melalui setiap baris angka romawi 
+    -untuk setiap baris
+        -jika baris tidak kosong, angka romawi di konversi menjadi nilai desimal menggunakan fungsi romantodecimal
+        -hasil konversi ditambahkan ke slice output
+    -hasil konversi ditulis ke file output nilai_numeril.txt 
+    -pesan berhasil di tampilkan di konsol
+
+Detail Kode
+    -import paket fmt dan io/ioutil dan log untuk manajemen input output dan logging serta strings untuk manipulasi string
+    -fungsi romantodecimal
+        -fungsi ini menerima sebuah string yang merupakan angka romawi dan mengembalikan nilai desimal yang sesuai
+        -algoritma yang digunakan adalah iteratif, dimulai dari digit terakhir ke digit pertama
+        -ketika digit saat ini lebih kecil dari digit sebelumnya, nilai desimalnya dikurangkan, jika tidak, ditambahkan
+        -setiap digit diubah menjadi nilai desimal menggunakan map yang diberikan
+        -setelah iterasi selesai nilai totalnya dikembalikan /return
+    -fungsi main
+        -fungsi utama program
+        -membaca isi dai file angka_romawi.txt 
+        -memisahkan isi file menjadi baris-baris dan menyimpannya dalam slice 'lines'
+        -iterasi melalui setiap baris angka romawi 
+        -setap baris yang tidak kosong akan dolah oeh fungsi romantodecimal untuk mengonversi menjadi nilai desimal 
+        -hasil konversi dimasukkan kedalam slice output dengan format yang sesuai 
+        -seluruh hasil konversi ditulis ke file nilai_numeril.txt 
+        -pesan konfirmasi ditampilkan di konsol setelah proses selesai 
+        

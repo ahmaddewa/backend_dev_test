@@ -1,0 +1,11 @@
+Skenario dan Detail kode sama dengan task 3 dan task 4,
+dari endpoint /datamahasiswa untuk user reqeust tampil data dan fungsi ch untuk goroutine cetakAngka dan cetakHuruf
+
+Skenario Tambahan
+    -endpoint /startconcurrency digunakan untuk memanggil API server, ketika API ini diakses oleh user maka server menjalankan fungsi goroutine cetakAngka dan cetakHuruf
+    -endpoint /stopconcurrency digunakan untuk memanggil API server, ketika API ini di akses oleh user maka server akan menutup channel stopConChan yang akan menghentikan fungsi goroutine cetakAngka dan cetakHuruf
+    -endpoint /exitprogram digunakan untuk memanggil API server, ketika API ini di akses oleh user maka server menajlankan os.Exit(0)
+
+Detail Kode Tambahan
+    -variabel stopConCHan digunakan untuk menghentikan fungsi goroutine cetakAngka dan cetakHuruf
+    -variabel wg digunakan untuk menunggu selesainya goroutine cetakAngka dan cetakHuruf sampai diakses stopconcurrency

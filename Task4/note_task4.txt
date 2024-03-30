@@ -1,0 +1,9 @@
+Deskripsi
+    -import paket yang dibutuhkan konkurensi
+    -pembuatan channel (ch) untuk tipe data string menggunakan fungsi make, channel ini digunakan untuk komunikasi antara goroutinee
+    -fungsi cetakAngka digunakan untuk mencetak angka dari 1 hingga 10, setiap angka yang dicetak dikirimkan melalui ch yang telah dibuat, dan ada delay waktu menggunakan time.Sleep
+    -fungsi cetakHUruf digunakan untuk mencetak huruf dari A hingga J, setiap hurus yang dicetak juga dikirimkan melalui ch yang sama dengan cetakAngka dan delay waktu menggunakan time.Sleep
+    -fungsi main digunakan pertama kali saat program dijalankan
+    -dalam fungsi main terdapat pengulangan sebanyak 20kali, dari pengulangan ini fungsi main menerima data dari ch dan mencetaknya, karena ch telah diisi oleh cetakAngka dan cetakHuruf maka pesan yang dicetak bergantian antara angka dan huruf 
+    -delay dalam fungsi cetakAngka dan cetakHuruf digunakan untuk pemrosesan yang terstruktur dan bergantian agar tidak bersamaan
+    -ouput program
